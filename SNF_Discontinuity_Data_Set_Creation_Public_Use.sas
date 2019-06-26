@@ -2025,11 +2025,6 @@ set snf_bpt.SNF_Bene_Period_1216_s_36;
 run;
 
 proc means data=snf_bpa.SNF_Bene_Period_1216 nolabels n nmiss mean median min max maxdec=2;
-var radm30 RADM_SNF30 RADM_During_SNF RADM_after_SNF30_1 RADM_after_SNF30_2;
-where hosp_admsndt^=. & snf_hospice^="1" & life_prgns_6month^="1" & ltc_prior100^=1 & benefitday_snfdc<=100;
-run;
-
-proc means data=snf_bpa.SNF_Bene_Period_1216 nolabels n nmiss mean median min max maxdec=2;
 var RADM_after_SNF30_1 RADM_after_SNF30_2;
 where hosp_admsndt^=. & snf_hospice^="1" & life_prgns_6month^="1" & ltc_prior100^=1 & benefitday_snfdc<=100 & deathdt>dschrgdt;
 run;
