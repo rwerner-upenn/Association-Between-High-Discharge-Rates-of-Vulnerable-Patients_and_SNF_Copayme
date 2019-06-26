@@ -125,7 +125,7 @@ gen combdty_sum5=1 if combdty_sum>=5
 replace combdty_sum5=0 if combdty_sum<5
 
 
-tab combdty_sum_2 benefitday_snfdc, col 
+tab combdty_sum_2 benefitday_snfdc, col
 
 reg combdty_sum0 day19
 reg combdty_sum0 day21
